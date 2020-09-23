@@ -24,11 +24,30 @@ public class CalendarTester {
 
 
         //Write similar tests for month, year and day of month.
+        //Current Date
+        System.out.println("The current date is: " + myCal.get(Calendar.MONTH) + " / " + myCal.get(Calendar.DATE)+" / "+ myCal.get(Calendar.YEAR));
+        //Month
+        System.out.println("The Month is: " + myCal.get(Calendar.MONTH));
+        //Year
+        System.out.println("The Year is: " + myCal.get(Calendar.YEAR));
+        //Day
+        System.out.println("The Day is: " + myCal.get(Calendar.DAY_OF_YEAR));
 
 
         //Call the .add method to add 100 days to myCal.  Then, check the date and weekday of this new date.
         // To see that it is correct, check out this calendar calculator:
         //http://www.timeanddate.com/date/dateadd.html
+        myCal.add(Calendar.DAY_OF_YEAR,100);
+        System.out.println("The new date is: " + myCal.get(Calendar.DATE));
+        System.out.println("The day of the week is: " + myCal.get(Calendar.DAY_OF_WEEK));
+        //Birthday
+        myCal.add(Calendar.DAY_OF_YEAR,-100);
+        myCal.setWeekDate(2021,19,4);
+        System.out.println("The weekday of my birthday is: " + myCal.get(Calendar.DAY_OF_WEEK));
+        //10,000 days from birthday
+        myCal.add(Calendar.DAY_OF_YEAR,10000);
+        System.out.println("10,000 days from by birthday the date will be: " + myCal.get(Calendar.MONTH) + " / " + myCal.get(Calendar.DATE)+" / "+ myCal.get(Calendar.YEAR));
+
 
 
         //Finally, find what day of the week is 10,000 days after your 2020 birthday. Note, you may have to play around

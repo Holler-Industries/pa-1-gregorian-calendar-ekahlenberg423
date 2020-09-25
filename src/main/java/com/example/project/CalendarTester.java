@@ -18,6 +18,22 @@ public class CalendarTester {
          * */
 
         //Call the .get method on myCal using Calendar.DAY_OF_WEEK as the argument
+        int x = myCal.get(Calendar.DAY_OF_WEEK);
+        if (x==1){
+            System.out.println("It is Sunday");
+        }else if(x==2){
+            System.out.println("It is Monday");
+        }else if(x==3){
+            System.out.println("It is Tuesday");
+        }else if(x==4){
+            System.out.println("It is Wednesday");
+        }else if(x==5){
+            System.out.println("It is Thursday");
+        }else if(x==6){
+            System.out.println("It is Friday");
+        }else {
+            System.out.println("It is Saturday");
+        }
 
         System.out.println("myCal Day of Week: " + myCal.get(Calendar.DAY_OF_WEEK));
         System.out.println("Expected: 4");     //Note: 1 = Sunday, 2 = Monday, etc.
